@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panadería Pepito</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+</head>
+<body>
+
+    <header>
+        <img src="images/img2.png" alt="Logo Panadería">
+        <h1>Panadería Pepito</h1>
+        <img src="images/img2.png" alt="Logo Panadería">
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#">Quiénes Somos</a></li>
+            <li><a href="#">Política de Calidad</a></li>
+            <li><a href="#">Nuestros Productos</a></li>
+            <li><a href="registro.html" class="registro">Regístrese</a></li>
+            <li><a href="#">Noticias del Sector</a></li>
+        </ul>
+    </nav>
+
+    <div class="contenedor">
+        
+        <aside class="barra-lateral izquierda">
+            <h3>Categorías</h3>
+            <ul>
+                <li><a href="#">Panes</a></li>
+                <li><a href="#">Dulces</a></li>
+                <li><a href="#">Salados</a></li>
+                <li><a href="#">Bebidas</a></li>
+            </ul>
+        </aside>
+
+        <main class="contenido">
+            <section class="noticias">
+                <h2>Noticias del Sector</h2>
+            </section>
+            
+            <h2>Productos Nueva Colección</h2>
+            <section class="productos">
+                <div class="producto">
+                    <img src="images/img3.avif" alt="Pan 1">
+                    <p>Pan Tradicional</p>
+                </div>
+                <div class="producto">
+                    <img src="images/img4.avif" alt="Pan 2">
+                    <p>Croissant</p>
+                </div>
+                <div class="producto">
+                    <img src="images/img5.avif" alt="Pan 3">
+                    <p>Pastel de Chocolate</p>
+                </div>
+            </section>
+
+            <aside class="clientes">
+                <h2>Nuestros Clientes</h2>
+                <img src="images/hombre.png" alt="Cliente 1">
+                <img src="images/nino.png" alt="Cliente 2">
+            </aside>
+        </main>
+
+        <aside class="barra-lateral derecha">
+            <h3>Promociones</h3>
+            <p>¡2x1 en croissants!</p>
+            <p>Descuento especial en tortas</p>
+        </aside>
+
+    </div>
+
+    <footer>
+        <p>Política de Copy Right</p>
+    </footer>
+
+    <script>
+        $(document).ready(function() {
+            // Efecto de resaltado al pasar el mouse por los enlaces del menú
+            $("nav ul li a").hover(function() {
+                $(this).css("color", "#ffcc80"); // Cambiar color al pasar el mouse
+            }, function() {
+                $(this).css("color", "white"); // Restablecer color al quitar el mouse
+            });
+
+            // Efecto de aumento de tamaño al pasar el mouse por los productos
+            $(".producto").hover(function() {
+                $(this).css("transform", "scale(1.05)"); // Aumentar tamaño
+            }, function() {
+                $(this).css("transform", "scale(1)"); // Restablecer tamaño
+            });
+
+            // Efecto de cambio de opacidad al pasar el mouse por las imágenes de los clientes
+            $(".clientes img").hover(function() {
+                $(this).css("opacity", "0.8"); // Reducir opacidad
+            }, function() {
+                $(this).css("opacity", "1"); // Restablecer opacidad
+            });
+
+            // Efecto de cambio de color en el título al pasar el mouse
+            $("header h1").hover(function(){
+                $(this).css("color", "#ffcc80")
+            }, function(){
+                $(this).css("color", "white")
+            });
+
+            // efecto de cambio de color en los titulos de las barras laterales
+            $(".barra-lateral h3").hover(function(){
+                $(this).css("color", "#ffcc80")
+            }, function(){
+                $(this).css("color", "white")
+            });
+
+        });
+    </script>
+</body>
+</html>
+
